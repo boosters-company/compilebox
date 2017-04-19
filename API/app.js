@@ -45,6 +45,8 @@ app.post('/compile',bruteforce.prevent,function(req, res)
     var language = req.body.language;
     var code = req.body.code;
     var stdin = req.body.stdin;
+    
+    console.log(req.body);
    
     var folder= 'temp/' + random(10); //folder in which the temporary folder will be saved
     var path=__dirname+"/"; //current working path
