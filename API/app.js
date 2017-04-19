@@ -10,7 +10,7 @@ var express = require('express');
 var arr = require('./compilers');
 var sandBox = require('./DockerSandbox');
 var app = express.createServer();
-var port=80;
+var port = 80;
 
 
 var ExpressBrute = require('express-brute');
@@ -68,6 +68,21 @@ app.post('/compile',bruteforce.prevent,function(req, res)
 app.get('/', function(req, res) 
 {
     res.sendfile("./index.html");
+});
+
+app.get('/loaderio-aed44d10990422aaf6db177da41b9e6e/', function(req, res)
+{
+  res.sendfile("./loaderio-aed44d10990422aaf6db177da41b9e6e.txt");
+});
+
+app.get('/loaderio-aed44d10990422aaf6db177da41b9e6e.html', function(req, res)
+{
+  res.sendfile("./loaderio-aed44d10990422aaf6db177da41b9e6e.html");
+});
+
+app.get('/loaderio-aed44d10990422aaf6db177da41b9e6e.txt', function(req, res)
+{
+  res.sendfile("./loaderio-aed44d10990422aaf6db177da41b9e6e.txt");
 });
 
 console.log("Listening at "+port)
