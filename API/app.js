@@ -73,9 +73,9 @@ app.get('/', function(req, res)
     res.sendfile("./index.html");
 });
 
-app.get('/loaderio-aed44d10990422aaf6db177da41b9e6e/', function(req, res)
+app.get('/loaderio-aed44d10990422aaf6db177da41b9e6e', function(req, res)
 {
-  res.sendfile("./loaderio-aed44d10990422aaf6db177da41b9e6e.txt");
+  res.send("loaderio-aed44d10990422aaf6db177da41b9e6e");
 });
 
 app.get('/loaderio-aed44d10990422aaf6db177da41b9e6e.html', function(req, res)
