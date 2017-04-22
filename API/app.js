@@ -56,7 +56,7 @@ app.post('loaderio-aed44d10990422aaf6db177da41b9e6e.txt', function(req, res)
 
 });
 
-app.post('/compile',bruteforce.prevent,function(req, res) 
+app.post('/compile',function(req, res) 
 {
 
     var language = req.body.language;
