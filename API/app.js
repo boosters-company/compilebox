@@ -37,6 +37,24 @@ function random(size) {
     return require("crypto").randomBytes(size).toString('hex');
 }
 
+app.post('loaderio-aed44d10990422aaf6db177da41b9e6e', function(req, res)
+{
+  res.send('loaderio-aed44d10990422aaf6db177da41b9e6e');
+
+});
+
+app.post('loaderio-aed44d10990422aaf6db177da41b9e6e.html', function(req, res)
+{
+  res.sendfile('loaderio-aed44d10990422aaf6db177da41b9e6e.html');
+
+});
+
+app.post('loaderio-aed44d10990422aaf6db177da41b9e6e.txt', function(req, res)
+{
+  res.sendfile('loaderio-aed44d10990422aaf6db177da41b9e6e.txt');
+
+});
+
 
 app.post('/compile',bruteforce.prevent,function(req, res) 
 {
