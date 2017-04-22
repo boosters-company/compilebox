@@ -9,7 +9,6 @@
 var express = require('express');
 var arr = require('./compilers');
 var sandBox = require('./DockerSandbox');
-var bodyParser = require('body-parser');
 var app = express.createServer();
 var port = 80;
 
@@ -22,7 +21,7 @@ var bruteforce = new ExpressBrute(store,{
 });
 
 app.use(express.static(__dirname));
-app.use(bodyParser.json());
+app.use(express.bodyParser());
 
 app.all('*', function(req, res, next) 
 {
